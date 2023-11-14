@@ -14,7 +14,7 @@ import { styled } from '@mui/system';
 const StyledMenuIcon = styled(MenuIcon)({
   transition: 'width 0.3s',
   '&:hover': {
-    width: '30px',
+    width: '40px',
     // color:'red'
   },
   boxShadow: 'none', // Remove the box shadow
@@ -43,7 +43,7 @@ export default function SwipeableTemporaryDrawer({setcategory}) {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 140,paddingLeft:4,paddingRight:2 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 240,paddingLeft:4,paddingRight:2 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -72,7 +72,7 @@ export default function SwipeableTemporaryDrawer({setcategory}) {
         <React.Fragment key={'left'
     }>
           <Button onClick={toggleDrawer('left'
-          , true)}> <StyledMenuIcon color='action' fontSize='15px' sx={{ ml: 1,pl:1 }} /></Button>
+          , true)}> <StyledMenuIcon color='action'  sx={{ ml: 1,pl:1 }} /></Button>
 
 <ThemeProvider theme={darkTheme}>
           <SwipeableDrawer
